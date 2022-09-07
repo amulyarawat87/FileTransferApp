@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
-  <div class="flex-column">
-    <!-- --------header----------------- -->
+<div class="flex-column">
+<!-- --------header----------------- -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -22,145 +22,164 @@
               <a class="nav-link" href="#">Recieve Files</a>
             </div>
     </nav>
-  <!-- --------header----------------- -->
-  
-   <!-- --------Send/Recieve----------------- -->
+<!-- --------header----------------- -->
 
-<div class="container"> <br />
-  <div class="row">
-
-    <div class="col-md-7">
-    <div class="panel panel-default">
-      <div class="panel-heading"><strong>Upload files</strong> <small> </small></div>
-      <div class="panel-body">
-        <div class="input-group image-preview">
-          <input placeholder="" type="text" class="form-control image-preview-filename" disabled="disabled">
-          <!-- don't give a name === doesn't send on POST/GET --> 
-          <span class="input-group-btn"> 
-          <!-- image-preview-clear button -->
-          <button type="button" class="btn btn-default image-preview-clear" style="display:none;"> <span class="glyphicon glyphicon-remove"></span> Clear </button>
-          <!-- image-preview-input -->
-          <div class="btn btn-default image-preview-input"> <span class="glyphicon glyphicon-folder-open"></span> <span class="image-preview-input-title">Browse</span>
-            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
-            <!-- rename it --> 
+<!-- --------Send/Recieve----------------- -->
+    <div class="container-fluid"> <br />
+      <div class="row">
+        <!-- --------Send----------------- -->
+        <div class="col-sm-6">
+          <div class="card" style="width: auto;">
+            <div class="card-body">
+              <h5 class="card-title text-center">Send Files</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="input-group image-preview align-content-center justify-content-center"> 
+                  <span class="input-group-btn"> 
+                  <!-- image-preview-input -->
+                  <div class="btn btn-default image-preview-input"> 
+                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                  </div>
+                  <button type="button" class="btn btn-labeled btn-dark"> 
+                    <span class="btn-label"><i class="glyphicon glyphicon-upload"></i> </span>Upload
+                  </button>
+                  </span> 
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="upload-drop-zone" id="drop-zone"> Or drag and drop files here </div>
+                <br />
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"> 
+                    <span class="sr-only">10%</span> 
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="js-upload-finished">
+                  <h4>Upload history</h4>
+                  <div class="list-group"> 
+                    <a href="#" class="list-group-item list-group-item-danger">
+                      <span class="badge alert-danger pull-right">23-11-2014</span>amended-catalogue-01.xls</a> 
+                    <a href="#" class="list-group-item list-group-item-success">
+                      <span class="badge alert-success pull-right">23-11-2014</span>amended-catalogue-01.xls</a> 
+                  </div>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
           </div>
-          <button type="button" class="btn btn-labeled btn-default"> <span class="btn-label"><i class="glyphicon glyphicon-upload"></i> </span>Upload</button>
-          </span> </div>
-        <!-- /input-group image-preview [TO HERE]--> 
-        
-        <br />
-        
-        <!-- Drop Zone -->
-        <div class="upload-drop-zone" id="drop-zone"> Or drag and drop files here </div>
-        <br />
-        <!-- Progress Bar -->
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> <span class="sr-only">60% Complete</span> </div>
         </div>
-        <br />
-        <!-- Upload Finished -->
-        <div class="js-upload-finished">
-          <h4>Upload history</h4>
-          <div class="list-group"> <a href="#" class="list-group-item list-group-item-danger"><span class="badge alert-danger pull-right">23-11-2014</span>amended-catalogue-01.xls</a> <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">23-11-2014</span>amended-catalogue-01.xls</a> <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">23-11-2014</span>amended-catalogue-01.xls</a> <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">23-11-2014</span>amended-catalogue.xls</a> </div>
+        <!-- --------Send----------------- -->
+
+        <!-- --------Recieve----------------- -->
+        <div class="col-sm-6">
+          <div class="card" style="width: auto;">
+            <div class="card-body">
+              <h5 class="card-title text-center">Recive files</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <button type="button" class="btn btn-labeled btn-primary"> <span class="btn-label"><i class="glyphicon glyphicon-download"></i> </span>Download catalogue</button>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn btn-labeled btn-info"> <span class="btn-label"><i class="glyphicon glyphicon-download"></i> </span>Download delta</button>
+              </li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
         </div>
+        
+        <!-- --------Recieve----------------- -->           
       </div>
     </div>
-  </div>
-      
-    <div class="col-md-5">
-      <div class="panel panel-default">
-           <div class="panel-heading"><strong>Download files</strong> <small> </small></div>
-       <div class="panel-body">
-      <button type="button" class="btn btn-labeled btn-primary"> <span class="btn-label"><i class="glyphicon glyphicon-download"></i> </span>Download catalogue</button>
-      <button type="button" class="btn btn-labeled btn-info"> <span class="btn-label"><i class="glyphicon glyphicon-download"></i> </span>Download delta</button>
-      <br />
-      </div>
-      </div>
-  </div>        
-      
-      
-</div>
-</div>
+<!-- --------Send/Recieve----------------- -->
 
-<!-- /container --> 
-   <!-- --------Send/Recieve----------------- -->
 
-  <!-- --------footer----------------- -->
-  <footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example21" class="form-control" />
-                <label class="form-label" for="form5Example21">Email address</label>
+<!-- --------footer----------------- -->
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
               </div>
+              <!--Grid column-->
+    
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="form5Example21" class="form-control" />
+                  <label class="form-label" for="form5Example21">Email address</label>
+                </div>
+              </div>
+              <!--Grid column-->
+    
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
             </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
-                Subscribe
-              </button>
-            </div>
-            <!--Grid column-->
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+    
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            This is a simple Peer to Peer file sharing App where you can upload files upto 10GB*.
+          </p>
+        </section>
+        <!-- Section: Text -->
+    
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid row-->
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">Send Files</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">Recieve Files</a></li>
+            </ul>
+            <!--Grid row-->
           </div>
           <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          This is a simple Peer to Peer file sharing App where you can upload files upto 10GB*.
-        </p>
-      </section>
-      <!-- Section: Text -->
-  
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid row-->
-          <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Send Files</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Recieve Files</a></li>
-          </ul>
-          <!--Grid row-->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
   <!-- --------footer----------------- -->
-  </div>
+</div>
     
     <script src="script/send-recieve.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
